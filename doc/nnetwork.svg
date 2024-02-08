@@ -1,0 +1,119 @@
+<svg id='nnetwork' width='100' height='100' viewbox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'>
+	
+	<style>
+		:root {
+			--dark-stroke: 1;
+			--stroke-lightness: calc(100% - calc(var(--dark-stroke) * 100%));
+			--stroke-color: hsl(0, 0%, 50%);
+			--fill-color: hsl(0, 0%, 100%);
+			--n1-color: hsl(210, 100%, 50%);
+			--n2-color: hsl(300, 100%, 50%);
+			--stroke-width: 0.5;
+			--stroke-width-n: 5;
+		}
+
+		.node {
+			fill: var(--fill-color);
+			stroke: var(--stroke-color);
+			stroke-width: 3;
+		}
+
+		.weight {
+			stroke: var(--stroke-color);
+			stroke-width: var(--stroke-width);
+			fill-opacity: 0;
+		}
+
+		#node-n1 {
+			fill: var(--n1-color);
+			stroke: var(--n1-color);
+		}
+
+		#node-n2 {
+			fill: var(--n2-color);
+			stroke: var(--n2-color);
+		}
+
+		#weight-n1 {
+			stroke: var(--n1-color);
+			stroke-width: var(--stroke-width-n);
+		}
+
+		#weight-n2 {
+			stroke: var(--n2-color);
+			stroke-width: var(--stroke-width-n);
+		}
+		</style>
+	
+		<!--Weigths Layer 1-to-2 Node 1-->
+		<path class='weight' id='weight' d='M10 10, 37 10'/>
+		<path class='weight' id='weight' d='M10 50, 37 10'/>
+		<path class='weight' id='weight' d='M10 90, 37 10'/>
+
+		<!--Weigths Layer 1-to-2 Node 2-->
+		<path class='weight' id='weight-n1' d='M10 10, 37 50'/>
+		<path class='weight' id='weight' d='M10 50, 37 50'/>
+		<path class='weight' id='weight' d='M10 90, 37 50'/>
+
+		<!--Weigths Layer 1-to-2 Node 3-->
+		<path class='weight' id='weight' d='M10 10, 37 90'/>
+		<path class='weight' id='weight' d='M10 50, 37 90'/>
+		<path class='weight' id='weight' d='M10 90, 37 90'/>
+	
+		<!--Weigths Layer 2-to-3 Node 1-->
+		<path class='weight' id='weight' d='M37 10, 64 10'/>
+		<path class='weight' id='weight' d='M37 50, 64 10'/>
+		<path class='weight' id='weight' d='M37 90, 64 10'/>
+
+		<!--Weigths Layer 2-to-3 Node 2-->
+		<path class='weight' id='weight-n2' d='M37 10, 64 50'/>
+		<path class='weight' id='weight' d='M37 50, 64 50'/>
+		<path class='weight' id='weight' d='M37 90, 64 50'/>
+
+		<!--Weigths Layer 2-to-3 Node 3-->
+		<path class='weight' id='weight' d='M37 10, 64 90'/>
+		<path class='weight' id='weight-n1' d='M37 50, 64 90'/>
+		<path class='weight' id='weight' d='M37 90, 64 90'/>
+
+		<!--Weigths Layer 3-to-4 Node 1-->
+		<path class='weight' id='weight' d='M64 10, 90 10'/>
+		<path class='weight' id='weight' d='M64 50, 90 10'/>
+		<path class='weight' id='weight' d='M64 90, 90 10'/>
+		
+		<!--Weigths Layer 3-to-4 Node 2-->
+		<path class='weight' id='weight' d='M64 10, 90 50'/>
+		<path class='weight' id='weight' d='M64 50, 90 50'/>
+		<path class='weight' id='weight' d='M64 90, 90 50'/>
+		
+		<!--Weigths Layer 3-to-4 Node 3-->
+		<path class='weight' id='weight' d='M64 10, 90 90'/>
+		<path class='weight' id='weight-n2' d='M64 50, 90 90'/>
+		<path class='weight' id='weight' d='M64 90, 90 90'/>
+		
+		<!--Layer Lines-->
+		<path class='weight' id='weight-n1' d='M10 10, 10 90'/>
+		<path class='weight' id='weight-n2' d='M37 10, 37 90'/>
+		<path class='weight' id='weight-n1' d='M64 10, 64 90'/>
+		<path class='weight' id='weight-n2' d='M90 10, 90 90'/>
+
+		<!--Nodes Layer 1-->	
+		<circle class='node' id='node-n1' cx='10' cy='10' r='7.5'/>
+		<circle class='node' id='node-n1' cx='10' cy='50' r='7.5'/>
+		<circle class='node' id='node-n1' cx='10' cy='90' r='7.5'/>
+
+		<!--Nodes Layer 2-->	
+		<circle class='node' id='node-n2' cx='37' cy='10' r='7.5'/>
+		<circle class='node' id='node-n1' cx='37' cy='50' r='7.5'/>
+		<circle class='node' id='node-n2' cx='37' cy='90' r='7.5'/>
+
+		<!--Nodes Layer 3-->	
+		<circle class='node' id='node-n1' cx='64' cy='10' r='7.5'/>
+		<circle class='node' id='node-n2' cx='64' cy='50' r='7.5'/>
+		<circle class='node' id='node-n1' cx='64' cy='90' r='7.5'/>
+		
+		<!--Nodes Layer 4-->	
+		<circle class='node' id='node-n2' cx='90' cy='10' r='7.5'/>
+		<circle class='node' id='node-n2' cx='90' cy='50' r='7.5'/>
+		<circle class='node' id='node-n2' cx='90' cy='90' r='7.5'/>
+		
+</svg>
