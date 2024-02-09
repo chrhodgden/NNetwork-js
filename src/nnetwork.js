@@ -1,4 +1,5 @@
-console.log('Hello from nnetwork.js');
+const math = require('mathjs');
+const Layer = require('./layer');
 
 class NNetwork {
 	constructor(nodeCounts, activationFunctionNames, learningRate) {
@@ -34,3 +35,5 @@ class NNetwork {
 		this.layers.reverse()
 	}
 };
+
+module.exports = NNetwork;

@@ -1,17 +1,26 @@
-console.log('Hello from nnetwork.test.js');
+const BinaryConverter = require('../../src/binaryConverter');
+const NNetwork = require('../../src/nnetwork');
+const math = require('mathjs');
 
-let testConv = new BinaryConverter(2);
-let nodeCounts = [testConv._inputDigits, 3, testConv._outputDigits];
-let afns = ['identity', 'relu', 'identity'];
+describe('Test NNetwork module', () => {
 
-let testNNetwork = new NNetwork(nodeCounts, afns, 0.1);
+    // let testConv = new BinaryConverter(2);
+    // let nodeCounts = [testConv._inputDigits, 3, testConv._outputDigits];
+    // let afns = ['identity', 'relu', 'identity'];
+    
+    // let testNNetwork = new NNetwork(nodeCounts, afns, 0.1);
+    
+    // testConv.randomInput();
+    // testNNetwork.forwardPropogation(testConv.inputActivation);
+    // testNNetwork.backPropogation(testConv.inputActivation, testConv.outputActivation);
+    
+    // testConv.randomInput();
+    // testNNetwork.forwardPropogation(testConv.inputActivation);
+    // testNNetwork.backPropogation(testConv.inputActivation, testConv.outputActivation);
+    
+    // testNNetwork.gradientDescent();
 
-console.log(testConv.randomInput());
-console.log(testNNetwork.forwardPropogation(testConv.inputActivation));
-console.log(testNNetwork.backPropogation(testConv.inputActivation, testConv.outputActivation));
+    test.todo('NNetwork Tests');
 
-console.log(testConv.randomInput());
-console.log(testNNetwork.forwardPropogation(testConv.inputActivation));
-console.log(testNNetwork.backPropogation(testConv.inputActivation, testConv.outputActivation));
+});
 
-testNNetwork.gradientDescent();
