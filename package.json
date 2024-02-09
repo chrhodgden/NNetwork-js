@@ -1,9 +1,10 @@
 {
   "name": "nnetwork",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.-dev.1",
+  "description": "A simple neural network as a Javascript Class Object",
+  "main": "src/index.js",
   "directories": {
+    "src": "src",
     "doc": "doc",
     "test": "test"
   },
@@ -11,8 +12,8 @@
     "test": "jest --coverage --coverageReporters=text > test/reports/coverage.txt"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Christian Hodgden",
+  "license": "MIT",
   "devDependencies": {
     "jest": "^29.7.0"
   },
