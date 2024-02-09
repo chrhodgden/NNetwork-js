@@ -1,23 +1,25 @@
-console.log('Hello from activationFunctions.test.js');
+const activationFunctionList = require('../../src/activationFunctions');
+const math = require('mathjs');
 
-console.log(activationFunctionList);
+describe('Test Activation Function module', () => {
 
-let result;
-let testVector = [-2, -1, 0, 1, 2];
-testVector = math.matrix(testVector);
-let testMatrix = math.matrix([testVector, testVector]);
+    let result;
+    let testVector = [-2, -1, 0, 1, 2];
+    testVector = math.matrix(testVector);
+    let testMatrix = math.matrix([testVector, testVector]);
+    
+    result = activationFunctionList['sigmoid'].gx(testVector);
+    result = activationFunctionList['sigmoid'].dg_dx(testVector);
+    
+    result = activationFunctionList['relu'].gx(testMatrix);
+    result = activationFunctionList['relu'].dg_dx(testMatrix);
+    
+    result = activationFunctionList['identity'].gx(testMatrix);
+    result = activationFunctionList['identity'].dg_dx(testMatrix);
+        
+    test.todo('Activation Function Tests');
 
-result = activationFunctionList['sigmoid'].gx(testVector);
-console.log(result);
-result = activationFunctionList['sigmoid'].dg_dx(testVector);
-console.log(result);
+});
 
-result = activationFunctionList['relu'].gx(testMatrix);
-console.log(result);
-result = activationFunctionList['relu'].dg_dx(testMatrix);
-console.log(result);
 
-result = activationFunctionList['identity'].gx(testMatrix);
-console.log(result);
-result = activationFunctionList['identity'].dg_dx(testMatrix);
-console.log(result);
+

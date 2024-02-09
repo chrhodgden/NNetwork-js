@@ -1,4 +1,4 @@
-console.log('Hello from activationFunctions.js');
+const math = require('mathjs');
 
 let sigmoidExpression = '1 / (1 + exp(-x))';
 let dSigmoidExpression = math.derivative(sigmoidExpression, 'x');
@@ -52,3 +52,5 @@ activationFunctionList = {
 		dg_dx: matrixMethod(dIdentity_dx)
 	}
 };
+
+module.exports = activationFunctionList;
