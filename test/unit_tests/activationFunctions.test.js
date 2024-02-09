@@ -13,16 +13,20 @@ describe('Test Activation Function module', () => {
         testMatrix = math.matrix([testVector, testVector]);
 	});
     
+	test.todo('Sigmoid Function');
 	result = activationFunctionList['sigmoid'].gx(testVector);
 	result = activationFunctionList['sigmoid'].dg_dx(testVector);
 	
+	test.todo('RELU Function');
 	result = activationFunctionList['relu'].gx(testMatrix);
 	result = activationFunctionList['relu'].dg_dx(testMatrix);
 	
+	test.todo('Identity Function');
 	result = activationFunctionList['identity'].gx(testMatrix);
 	result = activationFunctionList['identity'].dg_dx(testMatrix);
 		
-	test.todo('Activation Function Tests');
+	test.todo('Returns Vector');
+	test.todo('Returns Matrix');
 
 });
 
