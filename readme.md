@@ -1,4 +1,4 @@
-![NNetwork Icon](nnetwork.svg)
+![NNetwork Icon](./doc/nnetwork.svg)
 
 # NNetwork.js
 
