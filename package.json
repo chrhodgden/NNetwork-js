@@ -1,0 +1,22 @@
+{
+  "name": "nnetwork",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --coverage --coverageReporters=text > test/reports/coverage.txt"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "mathjs": "^12.3.2"
+  }
+}

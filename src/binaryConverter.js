@@ -54,3 +54,5 @@ class BinaryConverter {
 		return this._integer;		
 	}
 };
+
+module.exports = BinaryConverter;
