@@ -1,23 +1,23 @@
 {
-  "name": "nnetwork",
-  "version": "0.-dev.1",
-  "description": "A simple neural network as a Javascript Class Object",
-  "main": "src/index.js",
-  "directories": {
-    "src": "src",
-    "doc": "doc",
-    "test": "test"
-  },
-  "scripts": {
-    "test": "jest --coverage --coverageReporters=text > test/reports/coverage.txt"
-  },
-  "keywords": [],
-  "author": "Christian Hodgden",
-  "license": "MIT",
-  "devDependencies": {
-    "jest": "^29.7.0"
-  },
-  "dependencies": {
-    "mathjs": "^12.3.2"
-  }
+	"name": "nnetwork",
+	"version": "0.-dev.1",
+	"description": "A simple neural network as a Javascript Class Object",
+	"main": "src/index.js",
+	"directories": {
+		"src": "src",
+		"doc": "doc",
+		"test": "test"
+	},
+	"scripts": {
+		"test": "jest --coverage --coverageReporters=text > test/reports/coverage.txt"
+	},
+	"keywords": [],
+	"author": "Christian Hodgden",
+	"license": "MIT",
+	"devDependencies": {
+		"jest": "^29.7.0"
+	},
+	"dependencies": {
+		"mathjs": "^12.3.2"
+	}
 }
