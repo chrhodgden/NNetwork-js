@@ -1,4 +1,6 @@
-console.log('Hello from layer.js');
+const math = require('mathjs');
+const activationFunctionList = require('./activationFunctions');
+
 
 class Layer {
 	constructor(inputCount, nodeCount, activationFunctionName) {
@@ -10,7 +12,7 @@ class Layer {
 		this.z = math.matrix(math.zeros([nodeCount]));
 		this.dc_dw_vectors = math.matrix(math.zeros(this.weights._size));
 		this.dc_db_vectors = math.matrix(math.zeros(this.biases._size));
-		console.log('dc_db_vectors', this.dc_db_vectors);
+		//console.log('dc_db_vectors', this.dc_db_vectors);
 	}
 	forwardPropogation(activationInput) {
 		this.ai = activationInput;		
@@ -30,18 +32,18 @@ class Layer {
 		let dc_dai = math.multiply(dz_dai, dc_db);
 		
 		//store cost vectors for gradient descent		
-		console.log('dc_db_vectors', this.dc_db_vectors);
-		console.log('dc_db', dc_db);
+		//console.log('dc_db_vectors', this.dc_db_vectors);
+		//console.log('dc_db', dc_db);
 		this.dc_db_vectors = math.concat(this.dc_db_vectors, dc_db, 0);
 		this.dc_dw_vectors = math.concat(this.dc_dw_vectors, dc_dw, 0);
-		console.log('dc_db_vectors', this.dc_db_vectors);
+		//console.log('dc_db_vectors', this.dc_db_vectors);
 		
 		return dc_dai;
 	}
 	gradientDescent(learningRate) {
 		
-		console.log(this.dc_dw_vectors);
-		console.log(this.dc_db_vectors);
+		//console.log(this.dc_dw_vectors);
+		//console.log(this.dc_db_vectors);
 		
 		let dc_dw_avg = math.mean(this.dc_dw_vectors, 0)
 		let dc_db_avg = math.mean(this.dc_db_vectors, 0)
@@ -51,3 +53,5 @@ class Layer {
 		this.dc_db_vectors = math.matrix([]);
 	}
 };
+
+module.exports = Layer;

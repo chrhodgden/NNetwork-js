@@ -1,15 +1,22 @@
-console.log('Hello from layer.test.js');
+const BinaryConverter = require('../../src/binaryConverter');
+const Layer = require('../../src/layer');
+const math = require('mathjs');
 
-let testLayer = new Layer(2, 3, 'relu');
-let testConv = new BinaryConverter(2);
+describe('Test Layer module', () => {
 
-console.log(testLayer);
-console.log(testConv.randomInput());
+    let testLayer = new Layer(2, 3, 'relu');
+    let testConv = new BinaryConverter(2);
+    
+    testConv.randomInput()
+    testLayer.forwardPropogation(testConv.inputActivation);
+    
+    testLayer = new Layer(2, 3, 'sigmoid');
+    testLayer.forwardPropogation(testConv.inputActivation);
+    
+    testLayer = new Layer(2, 3, 'identity');
+    testLayer.forwardPropogation(testConv.inputActivation);
+        
+    test.todo('Layer Tests');
 
-console.log(testLayer.forwardPropogation(testConv.inputActivation));
+});
 
-testLayer = new Layer(2, 3, 'sigmoid');
-console.log(testLayer.forwardPropogation(testConv.inputActivation));
-
-testLayer = new Layer(2, 3, 'identity');
-console.log(testLayer.forwardPropogation(testConv.inputActivation));
