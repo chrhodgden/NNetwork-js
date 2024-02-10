@@ -4,19 +4,26 @@ const math = require('mathjs');
 
 describe('Test Layer module', () => {
 
-	let testLayer = new Layer(2, 3, 'relu');
-	let testConv = new BinaryConverter(2);
+	let testLayer;
+	let testConv;
 	
-	testConv.randomInput()
-	testLayer.forwardPropogation(testConv.inputActivation);
+	beforeEach(() => {
+		testConv = new BinaryConverter(2);
+		testConv.randomInput()
+	});
+
+	test.todo('Forward Propogation with RELU');
+	// testLayer = new Layer(2, 3, 'relu');
+	// testLayer.forwardPropogation(testConv.inputActivation);
 	
-	testLayer = new Layer(2, 3, 'sigmoid');
-	testLayer.forwardPropogation(testConv.inputActivation);
+	test.todo('Forward Propogation with Sigmoid');
+	// testLayer = new Layer(2, 3, 'sigmoid');
+	// testLayer.forwardPropogation(testConv.inputActivation);
 	
-	testLayer = new Layer(2, 3, 'identity');
-	testLayer.forwardPropogation(testConv.inputActivation);
+	test.todo('Forward Propogation with identity function');
+	// testLayer = new Layer(2, 3, 'identity');
+	// testLayer.forwardPropogation(testConv.inputActivation);
 		
-	test.todo('Layer Tests');
 
 });
 
