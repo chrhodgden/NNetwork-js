@@ -14,17 +14,20 @@ describe('Test Activation Function module', () => {
 	});
     
 	test.todo('Sigmoid Function');
-	result = activationFunctionList['sigmoid'].gx(testVector);
-	result = activationFunctionList['sigmoid'].dg_dx(testVector);
+	// result = activationFunctionList['sigmoid'].gx(testVector);
+	// result = activationFunctionList['sigmoid'].dg_dx(testVector);
 	
 	test.todo('RELU Function');
-	result = activationFunctionList['relu'].gx(testMatrix);
-	result = activationFunctionList['relu'].dg_dx(testMatrix);
+	// result = activationFunctionList['relu'].gx(testMatrix);
+	// result = activationFunctionList['relu'].dg_dx(testMatrix);
 	
 	test.todo('Identity Function');
-	result = activationFunctionList['identity'].gx(testMatrix);
-	result = activationFunctionList['identity'].dg_dx(testMatrix);
+	// result = activationFunctionList['identity'].gx(testMatrix);
+	// result = activationFunctionList['identity'].dg_dx(testMatrix);
 		
+	// tanh? need to learn more activation functions
+	test.todo('Custom Function');
+
 	test.todo('Returns Vector');
 	test.todo('Returns Matrix');
 
